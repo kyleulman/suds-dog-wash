@@ -1,12 +1,15 @@
 {
 	"title": "Sudslingers — Self-service Dog Wash and Professional Dog Grooming in Wilmington, NC",
 	"short_title": "Sudslingers",
+	"show_title": false,
 	"description": "We offer professional grooming, full-service bathing, and an easy and affordable self-service dog wash system. We use only the highest quality grooming equipment and supplies, including ramp entry tubs and hydraulic lift tables.",
-	"logo": { "src": "/logo.png" },
+	"logo": {
+		"src": "/logo.png",
+		"alt": "Company logo."
+	},
 	"phone": "910-793-2449",
 	"address": {
-		"street": "4904 Carolina Beach Road",
-		"unit": "A",
+		"street": "4904-A Carolina Beach Road",
 		"city": "Wilmington",
 		"state": "NC",
 		"zip": "28412"
@@ -14,8 +17,32 @@
 	"hours": "Tuesday — Sunday, 8:00am — 5:00pm",
 	"nav": [
 		{
-			"label": "Get Started",
-			"href": "/get-started"
+			"label": "Services & Pricing",
+			"href": "/services-and-pricing"
+		},
+		{
+			"label": "FURminator",
+			"href": "/furminator"
+		},
+		{
+			"label": "Photo Gallery",
+			"href": "/photo-gallery"
+		},
+		{
+			"label": "Contact Us",
+			"href": "/contact-us"
+		}
+	],
+	"social_links": [
+		{
+			"href": "http://www.facebook.com/sudslingers",
+			"src": "/facebook.svg",
+			"alt": "Follow us on Facebook."
+		},
+		{
+			"href": "http://www.twitter.com/sudslingers",
+			"src": "/twitter.svg",
+			"alt": "Follow us on Twitter."
 		}
 	]
 }

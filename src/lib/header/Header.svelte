@@ -1,60 +1,62 @@
 <script>
 	import site from '$lib/data/site.json';
-
-	export let data = {
-		show_title: true
-	};
 </script>
 
 <header>
-	<section class="contact">
-		<ul class="contact-info">
-			<li>
-				<address>
-					{site.address.street} <br />
-					{site.address.city}, {site.address.state}
-					{site.address.zip}
-				</address>
-			</li>
-			<li><a href={`tel:${site.phone}`}>{site.phone}</a></li>
-		</ul>
-		{#if site.social_links}
-			<ul class="social-links">
-				{#each site.social_links as { href, src, alt }}
-					<li>
-						<a {href}>
-							<img {src} {alt} />
-						</a>
-					</li>
-				{/each}
+	<div>
+		<section class="contact">
+			<ul class="contact-info">
+				<li>
+					<address>
+						{site.address.street} <br />
+						{site.address.city}, {site.address.state}
+						{site.address.zip}
+					</address>
+				</li>
 			</ul>
-		{/if}
-	</section>
-	<section class="main">
-		<div class="title-wrapper">
+			{#if site.social_links}
+				<ul class="social-links">
+					{#each site.social_links as { href, src, alt }}
+						<li>
+							<a {href}>
+								<img {src} {alt} />
+							</a>
+						</li>
+					{/each}
+					<li><a class="btn" href={`tel:${site.phone}`}>{site.phone}</a></li>
+				</ul>
+			{/if}
+		</section>
+		<nav>
+			{#each site.nav.filter((_, i) => i < site.nav.length / 2) as { href, label }}
+				<a {href}>{label}</a>
+			{/each}
 			<a href="/" class="title">
 				{#if site.logo}
 					<img src={site.logo.src} alt={site.logo.alt} />
-					{#if data.show_title}
+					{#if site.show_title}
 						<span>{site.short_title}</span>
 					{/if}
 				{:else}
 					{site.short_title}
 				{/if}
 			</a>
-		</div>
-		<nav>
-			{#each site.nav as { href, label }}
+			{#each site.nav.filter((_, i) => i >= site.nav.length / 2) as { href, label }}
 				<a {href}>{label}</a>
 			{/each}
 		</nav>
-	</section>
+	</div>
 </header>
 
-<style>
+<!-- <style>
 	header {
+		position: relative;
 		display: flex;
+		flex-flow: column;
+		gap: 1rem;
+		align-items: center;
 		padding: 2rem;
+		background: linear-gradient(hsl(var(--dark-blue) / 0.8) 25%, hsl(var(--dark-blue) / 0));
 	}
 
 	ul {
@@ -69,7 +71,8 @@
 	}
 
 	.contact {
-		margin: 2rem 0;
+		position: absolute;
+		margin: 2rem;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
@@ -77,6 +80,10 @@
 		gap: 1rem;
 		line-height: 1.25;
 		font-size: 0.8rem;
+		max-width: 1200px;
+		width: 100%;
+		padding: 1rem;
+		outline: 1px solid red;
 	}
 
 	.contact-info {
@@ -119,14 +126,13 @@
 	}
 
 	.social-links img {
-		width: 1rem;
+		width: 1.5rem;
 	}
 
 	.title {
 		display: flex;
 		flex-flow: column;
 		gap: 0.5rem;
-		max-width: 8rem;
 		line-height: 1.25;
 		text-decoration: none;
 		font-weight: 500;
@@ -141,22 +147,36 @@
 	}
 
 	.title img {
-		max-width: 40rem;
-		min-width: 40rem;
+		max-width: 35rem;
+		min-width: 35rem;
 	}
 
 	.main {
-		margin: 1rem 0;
+		margin: 1rem auto;
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
 		gap: 1rem;
 		justify-content: space-between;
+		max-width: 1200px;
+		width: 100%;
 	}
 
 	.main nav {
 		display: flex;
-		gap: 1rem;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		width: 100%;
+		font-weight: 600;
+	}
+
+	.main a {
+		text-decoration: none;
+	}
+
+	.main a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 500px) {
@@ -168,5 +188,89 @@
 			flex-flow: column;
 			text-align: center;
 		}
+	}
+</style> -->
+<style>
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	header {
+		position: relative;
+		background: linear-gradient(
+			hsl(var(--dark-blue) / 0.7),
+			hsl(var(--dark-blue) / 0.6),
+			hsl(var(--dark-blue) / 0)
+		);
+	}
+
+	header > div {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 2em;
+	}
+
+	/* Contact Row */
+	.contact {
+		position: relative;
+		max-width: 1200px;
+		margin: auto;
+		display: flex;
+
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2em;
+	}
+
+	.contact-info {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		font-size: 0.8em;
+	}
+
+	.contact-info address {
+		font-style: normal;
+		line-height: 1.25;
+	}
+
+	.social-links {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.social-links img {
+		width: 1em;
+		filter: drop-shadow(0px 0px 1px hsl(0 0% 0% / 0.5));
+	}
+
+	nav {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2em;
+	}
+
+	nav a {
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	nav a:hover {
+		text-decoration: underline;
+	}
+
+	nav .title {
+		flex: 1;
+	}
+
+	nav .title img {
+		width: 100%;
+		min-width: 400px;
 	}
 </style>
