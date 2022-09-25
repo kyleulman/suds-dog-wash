@@ -5,9 +5,11 @@
 	import Footer from '$lib/footer/Footer.svelte';
 	import '../app.css';
 	import Hours from '../lib/hours/Hours.svelte';
+
+	export let data;
 </script>
 
-<Header />
+<Header slug={data.routeId} />
 <div>
 	<main>
 		<slot />

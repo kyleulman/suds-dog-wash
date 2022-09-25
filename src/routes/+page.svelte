@@ -12,6 +12,47 @@
 			}
 		}
 	};
+
+	const pitches = [
+		{
+			heading: 'Self-service Bathing',
+			body: 'Bring your dog and leave the mess, no appointment necessary!',
+			cta: {
+				btn: {
+					label: 'Learn more',
+					action: '/self-service'
+				}
+			},
+			img: {
+				src: '/self-service-dog-wash.jpg',
+				alt: 'Self-service dog wash.'
+			}
+		},
+		{
+			heading: 'Full-service Bathing and Grooming',
+			body: 'Professional grooming at an affordable price.',
+			cta: {
+				btn: {
+					label: 'Learn more',
+					action: '/full-service'
+				}
+			},
+			img: {
+				src: '/woman-dog-smile.jpg',
+				alt: 'Woman next to dog smiling.'
+			}
+		},
+		{
+			heading: 'FURminator',
+			body: 'The vet-approved shedding treatment.',
+			cta: {
+				btn: {
+					label: 'Learn more',
+					action: '/furminator'
+				}
+			}
+		}
+	];
 </script>
 
 <Hero />
@@ -19,7 +60,7 @@
 	<h2>{content.cta.flavor}</h2>
 	<a href={content.cta.btn.action} class="btn btn-alt">{content.cta.btn.label}</a>
 </section>
-<Pitch />
+<Pitch content={pitches} />
 
 <style>
 	.cta {

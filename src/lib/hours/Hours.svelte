@@ -14,7 +14,7 @@
 		background: hsl(var(--blue));
 		border-radius: var(--radius);
 		box-shadow: var(--shadow);
-		padding: 2rem;
+		padding: 1rem;
 		text-align: center;
 	}
 
@@ -29,6 +29,6 @@
 
 	p {
 		max-width: 70%;
-		margin: 0 auto;
+		margin: 1em auto;
 	}
 </style>

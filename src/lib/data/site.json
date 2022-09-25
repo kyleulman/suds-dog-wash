@@ -19,19 +19,19 @@
 	"nav": [
 		{
 			"label": "Services & Pricing",
-			"href": "/services-and-pricing"
+			"href": "services-and-pricing"
 		},
 		{
 			"label": "FURminator",
-			"href": "/furminator"
+			"href": "furminator"
 		},
 		{
 			"label": "Photo Gallery",
-			"href": "/photo-gallery"
+			"href": "photo-gallery"
 		},
 		{
 			"label": "Contact Us",
-			"href": "/contact-us"
+			"href": "contact-us"
 		}
 	],
 	"social_links": [

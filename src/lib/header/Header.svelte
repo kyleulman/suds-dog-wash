@@ -1,5 +1,7 @@
 <script>
 	import site from '$lib/data/site.json';
+
+	export let slug;
 </script>
 
 <header>
@@ -42,154 +44,12 @@
 				{/if}
 			</a>
 			{#each site.nav.filter((_, i) => i >= site.nav.length / 2) as { href, label }}
-				<a {href}>{label}</a>
+				<a {href} class:active={slug === href}>{label}</a>
 			{/each}
 		</nav>
 	</div>
 </header>
 
-<!-- <style>
-	header {
-		position: relative;
-		display: flex;
-		flex-flow: column;
-		gap: 1rem;
-		align-items: center;
-		padding: 2rem;
-		background: linear-gradient(hsl(var(--dark-blue) / 0.8) 25%, hsl(var(--dark-blue) / 0));
-	}
-
-	ul {
-		display: flex;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-	}
-
-	address {
-		font-style: normal;
-	}
-
-	.contact {
-		position: absolute;
-		margin: 2rem;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: center;
-		gap: 1rem;
-		line-height: 1.25;
-		font-size: 0.8rem;
-		max-width: 1200px;
-		width: 100%;
-		padding: 1rem;
-		outline: 1px solid red;
-	}
-
-	.contact-info {
-		align-items: center;
-	}
-
-	.contact-info li:first-child {
-		border-right: 1px dashed;
-		padding-right: 0.75rem;
-	}
-
-	.contact-info li:last-child {
-		padding-left: 0.75rem;
-		white-space: nowrap;
-	}
-
-	@media (max-width: 350px) {
-		.contact {
-			flex-flow: column;
-			text-align: center;
-		}
-
-		.contact-info {
-			flex-flow: column;
-			gap: 0.5rem;
-		}
-
-		.contact-info li:first-child {
-			border-right: 0;
-			padding-right: 0;
-		}
-
-		.contact-info li:last-child {
-			padding-left: 0;
-		}
-	}
-
-	.social-links {
-		gap: 0.5rem;
-	}
-
-	.social-links img {
-		width: 1.5rem;
-	}
-
-	.title {
-		display: flex;
-		flex-flow: column;
-		gap: 0.5rem;
-		line-height: 1.25;
-		text-decoration: none;
-		font-weight: 500;
-	}
-
-	@media (max-width: 500px) {
-		.title {
-			align-items: center;
-			gap: 1rem;
-			text-align: center;
-		}
-	}
-
-	.title img {
-		max-width: 35rem;
-		min-width: 35rem;
-	}
-
-	.main {
-		margin: 1rem auto;
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		gap: 1rem;
-		justify-content: space-between;
-		max-width: 1200px;
-		width: 100%;
-	}
-
-	.main nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 2rem;
-		width: 100%;
-		font-weight: 600;
-	}
-
-	.main a {
-		text-decoration: none;
-	}
-
-	.main a:hover {
-		text-decoration: underline;
-	}
-
-	@media (max-width: 500px) {
-		.main {
-			flex-flow: column;
-		}
-
-		.main nav {
-			flex-flow: column;
-			text-align: center;
-		}
-	}
-</style> -->
 <style>
 	ul {
 		list-style: none;
@@ -262,6 +122,10 @@
 	}
 
 	nav a:hover {
+		text-decoration: underline;
+	}
+
+	nav a.active {
 		text-decoration: underline;
 	}
 

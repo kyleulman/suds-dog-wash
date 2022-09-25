@@ -92,6 +92,14 @@ img {
 	max-width: 100%;
 }
 
+label.required::after {
+	content: '*';
+}
+
+textarea {
+	resize: none;
+}
+
 /* Hero */
 h1 em {
 	position: absolute;
