@@ -1,7 +1,5 @@
 <script>
 	import site from '$lib/data/site.json';
-
-	export let slug;
 </script>
 
 <header>
@@ -44,7 +42,7 @@
 				{/if}
 			</a>
 			{#each site.nav.filter((_, i) => i >= site.nav.length / 2) as { href, label }}
-				<a {href} class:active={slug === href}>{label}</a>
+				<a {href}>{label}</a>
 			{/each}
 		</nav>
 	</div>

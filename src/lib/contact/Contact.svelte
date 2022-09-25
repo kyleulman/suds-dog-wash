@@ -1,4 +1,4 @@
-<form action="">
+<form method="POST">
 	<div>
 		<label for="name" class="required">Name</label>
 		<input type="text" id="name" name="name" required />

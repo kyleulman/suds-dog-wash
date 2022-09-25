@@ -1,3 +1,1 @@
-export function load({ routeId }) {
-	return { routeId };
-}
+export const prerender = true;
