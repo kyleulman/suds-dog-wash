@@ -11,7 +11,7 @@
 <section class="contact">
 	<h1>{content.page.title}</h1>
 	<p>
-		Questions, concerns and feedback welcome. Let us know how our service was. We want to know what
+		Questions, concerns and feedback welcome! Let us know how our service was. We want to know what
 		our customers think and how we can improve to better serve you.
 	</p>
 	<Contact />
