@@ -1,12 +1,14 @@
 <script>
+	import site from '$lib/data/site';
 	import Hero from '$lib/hero/Hero.svelte';
+	import Pitch from '$lib/pitch/Pitch.svelte';
 
 	const content = {
 		cta: {
 			flavor: 'A clean, shiny pup and lots of extra hugs, guaranteed!',
 			btn: {
 				label: 'Call Today',
-				action: 'tel:9107932449'
+				action: `tel:${site.phone}`
 			}
 		}
 	};
@@ -17,10 +19,11 @@
 	<h2>{content.cta.flavor}</h2>
 	<a href={content.cta.btn.action} class="btn btn-alt">{content.cta.btn.label}</a>
 </section>
+<Pitch />
 
 <style>
 	.cta {
-		margin: 1rem 0;
+		margin: 2rem 0;
 		display: flex;
 		align-items: center;
 		gap: 2rem;

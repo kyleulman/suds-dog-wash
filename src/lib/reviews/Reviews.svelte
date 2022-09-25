@@ -35,7 +35,6 @@
 	section {
 		display: flex;
 		flex-flow: column;
-		align-items: flex-end;
 		gap: 5rem;
 		font-size: 1.25rem;
 		margin: auto;
