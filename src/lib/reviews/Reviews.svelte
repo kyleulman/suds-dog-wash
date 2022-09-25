@@ -38,7 +38,6 @@
 		align-items: flex-end;
 		gap: 5rem;
 		font-size: 1.25rem;
-		max-width: 1200px;
 		margin: auto;
 	}
 
@@ -46,9 +45,9 @@
 		position: relative;
 		background: hsl(var(--dark-blue) / 0.5);
 		padding: 2rem;
-		border-radius: 3em;
+		border-radius: var(--radius);
 		max-width: 350px;
-		box-shadow: 0.1em 0.1em 0.5em hsl(var(--dark) / 0.25);
+		box-shadow: var(--shadow);
 	}
 
 	article:nth-of-type(even) {

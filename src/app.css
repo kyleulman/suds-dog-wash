@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
 :root {
 	--dark: 216 18% 16%;
 	--light-blue: 203 95% 67%;
 	--blue: 203 95% 57%;
 	--dark-blue: 203 95% 47%;
-	--light: #f2f7f8;
+	--light: 190 30% 96%;
+	--red: 360 85% 54%;
+
+	--radius: 3em;
+	--shadow: 0.1em 0.1em 0.5em hsl(var(--dark) / 0.25);
+
+	--heading: 'Patua One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 *,
@@ -15,8 +23,7 @@
 body {
 	margin: 0;
 	line-height: 1.6;
-	background: var(--dark);
-	color: var(--light);
+	color: hsl(var(--light));
 	font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 18px;
 	background-color: #dfdbe5;
@@ -67,9 +74,34 @@ section h1 {
 	font-weight: 500;
 	cursor: pointer;
 	border-radius: 0.25em;
+	white-space: nowrap;
+}
+
+.btn-alt {
+	border-radius: 4em;
+	background: hsl(var(--red));
+	border: 0;
 }
 
 img {
 	display: block;
 	max-width: 100%;
+}
+
+/* Hero */
+h1 em {
+	position: absolute;
+	z-index: 0;
+	right: -1.75em;
+	top: 50%;
+	transform: translateY(-50%);
+	background: yellow;
+	width: 140px;
+	height: 140px;
+	font-size: 2em;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: var(--shadow);
 }
