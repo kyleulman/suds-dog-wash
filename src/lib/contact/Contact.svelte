@@ -39,6 +39,8 @@
 		border: 0;
 		border-radius: 1em;
 		padding: 0.25em 0.5em;
+		min-width: 0;
+		width: 100%;
 	}
 
 	button[type='submit'] {

@@ -37,7 +37,7 @@
 	section > div {
 		margin: 4rem 0;
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: row;
 		align-items: center;
 		gap: 2rem;
 	}
@@ -52,6 +52,17 @@
 
 	section > div:last-of-type {
 		text-align: center;
+	}
+
+	@media (max-width: 800px) {
+		section > div {
+			flex-flow: column;
+			text-align: center;
+		}
+
+		section > div > article {
+			order: 1;
+		}
 	}
 
 	img {

@@ -117,3 +117,10 @@ h1 em {
 	align-items: center;
 	box-shadow: var(--shadow);
 }
+
+@media (max-width: 500px) {
+	h1 em {
+		width: 90px;
+		height: 90px;
+	}
+}

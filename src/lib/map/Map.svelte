@@ -19,6 +19,7 @@
 		background: hsl(var(--blue));
 		border-radius: var(--radius);
 		box-shadow: var(--shadow);
+		max-width: 350px;
 	}
 
 	figure {
@@ -30,6 +31,7 @@
 
 	iframe {
 		max-width: 350px;
+		width: 100%;
 		height: 350px;
 		display: block;
 	}

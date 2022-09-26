@@ -17,32 +17,43 @@
 		<Map />
 		<Hours />
 	</aside>
-</div>
-<div class="footer">
 	<Footer />
 </div>
 
 <style>
 	.main {
-		display: flex;
-		align-items: flex-start;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
 		max-width: 1200px;
 		margin: 0 auto;
 		gap: 4rem;
 		padding: 0 2rem;
 	}
 
+	main {
+		max-width: 715px;
+		margin: 0 auto;
+	}
+
 	aside {
+		align-self: start;
 		display: flex;
 		flex-flow: column;
 		gap: 5em;
-		padding: 2rem 0;
 		max-width: 350px;
 	}
 
-	.footer {
-		display: flex;
-		justify-content: center;
-		padding: 0 2rem;
+	@media (max-width: 1200px) {
+		main {
+			grid-column: 1 / 3;
+		}
+
+		aside {
+			grid-column: 1 / 3;
+			flex-flow: row wrap;
+			align-items: flex-start;
+			justify-content: center;
+			max-width: 100%;
+		}
 	}
 </style>

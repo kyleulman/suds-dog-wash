@@ -29,11 +29,14 @@
 
 	.gallery {
 		display: grid;
+		gap: 1em;
 		grid-template-columns: repeat(2, 1fr);
+		align-items: start;
 	}
 
-	.gallery img {
-		aspect-ratio: 1/1;
-		object-fit: cover;
+	@media (max-width: 600px) {
+		.gallery {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

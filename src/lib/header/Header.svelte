@@ -67,20 +67,27 @@
 	header > div {
 		margin: 0 auto;
 		max-width: 1200px;
-		padding: 2em;
+		padding: 1em 2em;
 	}
 
 	/* Contact Row */
 	.contact {
 		position: relative;
 		max-width: 1200px;
-		margin: auto;
+		margin: 1em auto;
 		display: flex;
 
 		flex-flow: row wrap;
 		align-items: center;
 		justify-content: space-between;
 		gap: 2em;
+	}
+
+	@media (max-width: 600px) {
+		.contact {
+			flex-flow: column;
+			text-align: center;
+		}
 	}
 
 	.contact-info {
@@ -103,6 +110,7 @@
 
 	.social-links img {
 		width: 1em;
+		min-width: 1em;
 		filter: drop-shadow(0px 0px 1px hsl(0 0% 0% / 0.5));
 	}
 
@@ -112,6 +120,13 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 2em;
+		margin: 1em 0;
+	}
+
+	@media (max-width: 1200px) {
+		nav {
+			flex-flow: column;
+		}
 	}
 
 	nav a {
@@ -123,16 +138,32 @@
 		text-decoration: underline;
 	}
 
-	nav a.active {
-		text-decoration: underline;
-	}
-
 	nav .title {
 		flex: 1;
+	}
+
+	@media (max-width: 1200px) {
+		a.title {
+			order: 0;
+		}
+
+		a:not(.title) {
+			order: 1;
+		}
 	}
 
 	nav .title img {
 		width: 100%;
 		min-width: 400px;
+	}
+
+	@media (max-width: 600px) {
+		nav .title {
+			width: 100%;
+		}
+
+		nav .title img {
+			min-width: 0;
+		}
 	}
 </style>

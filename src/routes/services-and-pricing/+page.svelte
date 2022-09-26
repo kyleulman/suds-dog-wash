@@ -12,23 +12,16 @@
 				body: [
 					`<i>Bring your dog and leave the mess, no appointment necessary!</i>`,
 					`With ramp entry tubs and hydraulic lift grooming tables, our bathing system requires virtually no lifting or bending. We provide all necessary grooming supplies including a variety of all-natural shampoos, aprons, towels, brushes & combs, forced air dog dryers, ear cleaner, and colognes.`,
-
-					`<ul>
-					<li>Small (under 20 lbs) — $13</li>
-					<li>Medium (20-60 lbs) — $16</li>
-					<li>Large (60-100 lbs) — $19</li>
-					<li>X-Large (over 100 lbs) — $23</li>
-				</ul>`
+					`<ul><li>Small (under 20 lbs) — $13</li><li>Medium (20-60 lbs) — $16</li><li>Large (60-100 lbs) — $19</li><li>X-Large (over 100 lbs) — $23</li></ul>`
 				]
 			},
 			{
 				heading: 'Full-service Bathing & Nail Clipping',
 				body: [
 					`With ramp entry tubs and hydraulic lift grooming tables, our bathing system requires virtually no lifting or bending. We provide all necessary grooming supplies including a variety of all-natural shampoos, aprons, towels, brushes & combs, forced air dog dryers, ear cleaner, and colognes.`,
-					`Flea & tick, oatmeal anti-itch, medicated, tearless, and other specialty shampoos — $2 extra`,
-					`Nail clipping — $10`,
-					`<b>Free nail clipping on Valentine's Day (February 14th)</b>`,
-					`Please call <a href=${site.phone}>${site.phone}</a> for an appointment.`
+					`<ul><li>Flea & tick, oatmeal anti-itch, medicated, tearless, and other specialty shampoos — $2 extra</li><li>Nail clipping — $10</li></ul>`,
+					`Please call <a href=${site.phone}>${site.phone}</a> for an appointment.`,
+					`<b>Free nail clipping on Valentine's Day (February 14th)</b>`
 				]
 			},
 			{
@@ -41,7 +34,7 @@
 			},
 			{
 				heading: 'FURminator Shedless Treatment',
-				body: [``, `<a href="/furminator">Read more here</a>`]
+				body: [`The vet-approved shedding treatment.`, `<a href="/furminator">Read more here</a>`]
 			}
 		]
 	};

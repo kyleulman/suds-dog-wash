@@ -46,7 +46,8 @@
 		border-radius: var(--radius);
 		box-shadow: var(--shadow);
 		height: 400px;
-		width: 60%;
+		min-width: 60%;
+		max-width: 400px;
 		object-fit: cover;
 	}
 
@@ -71,6 +72,34 @@
 		letter-spacing: 1px;
 		color: hsl(var(--red));
 		z-index: 1;
+	}
+
+	@media (max-width: 500px) {
+		h1 {
+			max-width: 175px;
+			font-size: 1.5em;
+		}
+	}
+
+	@media (max-width: 700px) {
+		figure {
+			flex-flow: column;
+		}
+
+		img {
+			position: relative;
+			top: 2rem;
+			align-self: flex-end;
+			min-width: 0;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.heading {
+			align-self: flex-start;
+			position: relative;
+			bottom: 2rem;
+		}
 	}
 
 	article {

@@ -40,6 +40,12 @@
 		margin: auto;
 	}
 
+	@media (max-width: 1200px) {
+		section {
+			margin: 0;
+		}
+	}
+
 	article {
 		position: relative;
 		background: hsl(var(--dark-blue) / 0.5);

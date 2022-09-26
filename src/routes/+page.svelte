@@ -52,7 +52,9 @@
 <Hero />
 <section class="cta">
 	<h2>{content.cta.flavor}</h2>
-	<a href={content.cta.btn.action} class="btn btn-alt">{content.cta.btn.label}</a>
+	<div>
+		<a href={content.cta.btn.action} class="btn btn-alt">{content.cta.btn.label}</a>
+	</div>
 </section>
 <Pitch content={pitches} />
 
@@ -60,23 +62,41 @@
 	.cta {
 		margin: 2rem 0;
 		display: flex;
+		flex-flow: row wrap;
 		align-items: center;
 		gap: 2rem;
 		padding: 2rem 4rem;
 		background-color: hsl(var(--blue));
 		box-shadow: 0em 0em 1em hsl(var(--light) / 0.25);
 		border-radius: var(--radius);
-	}
-	.cta {
 		font-size: 1.5em;
 	}
 
+	@media (max-width: 700px) {
+		.cta {
+			flex-flow: column;
+			text-align: center;
+		}
+	}
+
+	.cta > div {
+		text-align: center;
+	}
+
 	.cta h2 {
+		flex: 1;
 		font-family: var(--heading);
 		letter-spacing: 2px;
 	}
 
+	@media (max-width: 500px) {
+		h2 {
+			font-size: 1em;
+		}
+	}
+
 	.cta .btn-alt {
 		box-shadow: 0rem 0rem 2em hsl(var(--light));
+		justify-self: center;
 	}
 </style>
