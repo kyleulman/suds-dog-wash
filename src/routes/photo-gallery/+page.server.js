@@ -7,6 +7,8 @@ cloudinary.config({
 	secure: import.meta.env.MODE === 'production'
 });
 
+// TODO: Add media upload
+
 export async function load() {
 	const photos = await cloudinary.search
 		.expression('resource_type:image AND folder=suds-dog-wash')
