@@ -13,7 +13,7 @@
 					{@html article.body}
 				</p>
 				{#if article.btn}
-					<a class="btn" href={article.cta.btn.action}>{article.cta.btn.label}</a>
+					<a class="btn" href={article.btn.action}>{article.btn.label}</a>
 				{/if}
 			</article>
 			{#if article.img}

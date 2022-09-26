@@ -38,7 +38,6 @@
 
 	address {
 		font-style: normal;
-		/* text-align: center; */
 	}
 
 	address p {

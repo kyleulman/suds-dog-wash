@@ -8,7 +8,7 @@
 </script>
 
 <Header />
-<div>
+<div class="main">
 	<main>
 		<slot />
 	</main>
@@ -18,15 +18,18 @@
 		<Hours />
 	</aside>
 </div>
-<Footer />
+<div class="footer">
+	<Footer />
+</div>
 
 <style>
-	div {
+	.main {
 		display: flex;
 		align-items: flex-start;
 		max-width: 1200px;
 		margin: 0 auto;
 		gap: 4rem;
+		padding: 0 2rem;
 	}
 
 	aside {
@@ -35,5 +38,11 @@
 		gap: 5em;
 		padding: 2rem 0;
 		max-width: 350px;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: center;
+		padding: 0 2rem;
 	}
 </style>

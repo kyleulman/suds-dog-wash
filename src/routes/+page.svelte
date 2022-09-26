@@ -17,11 +17,9 @@
 		{
 			heading: 'Self-service Bathing',
 			body: 'Bring your dog and leave the mess, no appointment necessary!',
-			cta: {
-				btn: {
-					label: 'Learn more',
-					action: '/self-service'
-				}
+			btn: {
+				label: 'Learn more',
+				action: '/self-service'
 			},
 			img: {
 				src: '/self-service-dog-wash.jpg',
@@ -31,11 +29,9 @@
 		{
 			heading: 'Full-service Bathing and Grooming',
 			body: 'Professional grooming at an affordable price.',
-			cta: {
-				btn: {
-					label: 'Learn more',
-					action: '/full-service'
-				}
+			btn: {
+				label: 'Learn more',
+				action: '/full-service'
 			},
 			img: {
 				src: '/woman-dog-smile.jpg',
@@ -45,11 +41,9 @@
 		{
 			heading: 'FURminator',
 			body: 'The vet-approved shedding treatment.',
-			cta: {
-				btn: {
-					label: 'Learn more',
-					action: '/furminator'
-				}
+			btn: {
+				label: 'Learn more',
+				action: '/furminator'
 			}
 		}
 	];
