@@ -20,7 +20,7 @@
 				body: [
 					`With ramp entry tubs and hydraulic lift grooming tables, our bathing system requires virtually no lifting or bending. We provide all necessary grooming supplies including a variety of all-natural shampoos, aprons, towels, brushes & combs, forced air dog dryers, ear cleaner, and colognes.`,
 					`<ul><li>Flea & tick, oatmeal anti-itch, medicated, tearless, and other specialty shampoos — $2 extra</li><li>Nail clipping — $10</li></ul>`,
-					`Please call <a href=${site.phone}>${site.phone}</a> for an appointment.`,
+					`Please call <a href=tel:${site.phone}>${site.phone}</a> for an appointment.`,
 					`<b>Free nail clipping on Valentine's Day (February 14th)</b>`
 				]
 			},
@@ -28,7 +28,7 @@
 				heading: 'Professional Grooming',
 				body: [
 					`As seasoned ‘all breed’ dog groomers, we prefer to limit our work load each day to ensure your dog gets plenty of attention and is groomed thoroughly. Our upbeat attitude and awesome energy makes Sudslingers a welcoming and fun place to visit. You’ll enjoy great grooming at great prices!`,
-					`Please call <a href=${site.phone}>${site.phone}</a> for an appointment.`,
+					`Please call <a href=tel:${site.phone}>${site.phone}</a> for an appointment.`,
 					`<i>Prices will vary depending on the size and breed of your dog.</i>`
 				]
 			},
