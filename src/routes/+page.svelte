@@ -19,7 +19,7 @@
 			body: 'Bring your dog and leave the mess, no appointment necessary!',
 			btn: {
 				label: 'Learn more',
-				action: '/self-service'
+				action: '/services-and-pricing'
 			},
 			img: {
 				src: '/self-service-dog-wash.jpg',
@@ -31,7 +31,7 @@
 			body: 'Professional grooming at an affordable price.',
 			btn: {
 				label: 'Learn more',
-				action: '/full-service'
+				action: '/services-and-pricing'
 			},
 			img: {
 				src: '/woman-dog-smile.jpg',

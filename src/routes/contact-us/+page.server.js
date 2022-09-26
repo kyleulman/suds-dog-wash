@@ -7,7 +7,12 @@ export const actions = {
 	default: async ({ request }) => {
 		const body = formDataToObject(await request.formData());
 
-		const res = await fetch('http://127.0.0.1:5173/api/forms', {
+		const url =
+			import.meta.env.MODE === 'production'
+				? 'https://ulman.digital/api/forms'
+				: 'http://127.0.0.1:5173/api/forms';
+
+		const res = await fetch(url, {
 			method: 'POST',
 			headers: {
 				accept: 'application/json',
