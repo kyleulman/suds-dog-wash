@@ -26,7 +26,7 @@
 			{/each}
 		</ul>
 	</div>
-	<small id="ud">Website by <a href="https://petcarewebsolutions.com">Paws Pro</a></small>
+	<small id="ud">Website by <a href="https://ulman.digital">Ulman Digital</a></small>
 </footer>
 
 <style>
