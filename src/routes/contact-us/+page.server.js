@@ -7,25 +7,23 @@ export const actions = {
 	default: async ({ request }) => {
 		const body = formDataToObject(await request.formData());
 
-		const url =
-			import.meta.env.MODE === 'production'
-				? 'https://ulman.digital/api/forms'
-				: 'http://127.0.0.1:5173/api/forms';
-
-		const res = await fetch(url, {
+		const res = await fetch(`${import.meta.env.VITE_API_URL}/api/forms`, {
 			method: 'POST',
 			headers: {
 				accept: 'application/json',
 				'content-type': 'application/json',
-				authorization: `Bearer ${import.meta.env.VITE_FORMS_KEY}`,
-				origin: request.headers.get('origin')
+				origin: request.headers.get('origin'),
+				authorization: import.meta.env.VITE_FORMS_KEY
 			},
 			body: JSON.stringify(body)
 		});
 
-		// TODO: Handle ret
-		console.log(res.status);
-
-		throw redirect(303, '/contact-us');
+		if (res.status === 200) {
+			throw redirect(303, '/contact-us?success');
+		} else if (res.status === 403) {
+			throw redirect(303, '/contact-us?unauthorized');
+		} else {
+			throw redirect(303, '/contact-us?unexpected');
+		}
 	}
 };
