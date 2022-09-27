@@ -27,7 +27,8 @@
 		},
 		{
 			"label": "Photo Gallery",
-			"href": "photo-gallery"
+			"href": "photo-gallery",
+			"isPrefetch": true
 		},
 		{
 			"label": "Contact Us",

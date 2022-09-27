@@ -7,6 +7,8 @@ cloudinary.config({
 	secure: import.meta.env.MODE === 'production'
 });
 
+export const prerender = false;
+
 // TODO: Add media upload
 
 export async function load() {

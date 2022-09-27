@@ -5,7 +5,13 @@
 	import Footer from '$lib/footer/Footer.svelte';
 	import '../app.css';
 	import Hours from '../lib/hours/Hours.svelte';
+	import site from '$lib/data/site.json';
 </script>
+
+<svelte:head>
+	<title>{site.title}</title>
+	<meta name="description" content={site.description} />
+</svelte:head>
 
 <Header />
 <div class="main">

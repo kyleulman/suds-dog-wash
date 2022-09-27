@@ -41,8 +41,8 @@
 					{site.short_title}
 				{/if}
 			</a>
-			{#each site.nav.filter((_, i) => i >= site.nav.length / 2) as { href, label }}
-				<a {href}>{label}</a>
+			{#each site.nav.filter((_, i) => i >= site.nav.length / 2) as { href, label, isPrefetch }}
+				<a {href} data-sveltekit-prefetch={isPrefetch === true ? '' : 'off'}>{label}</a>
 			{/each}
 		</nav>
 	</div>

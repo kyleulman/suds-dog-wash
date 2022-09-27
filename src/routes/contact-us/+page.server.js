@@ -3,6 +3,11 @@ import { formDataToObject } from './formDataToObject';
 
 export const prerender = false;
 
+export function load({ url }) {
+	const status = url.searchParams.get('status');
+	return { status };
+}
+
 export const actions = {
 	default: async ({ request }) => {
 		const body = formDataToObject(await request.formData());
@@ -18,12 +23,6 @@ export const actions = {
 			body: JSON.stringify(body)
 		});
 
-		if (res.status === 200) {
-			throw redirect(303, '/contact-us?success');
-		} else if (res.status === 403) {
-			throw redirect(303, '/contact-us?unauthorized');
-		} else {
-			throw redirect(303, '/contact-us?unexpected');
-		}
+		throw redirect(303, `/contact-us?status=${res.status}`);
 	}
 };
