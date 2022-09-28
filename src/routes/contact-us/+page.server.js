@@ -1,13 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { formDataToObject } from './formDataToObject';
 
-export const prerender = false;
-
-export function load({ url }) {
-	const status = url.searchParams.get('status');
-	return { status };
-}
-
 export const actions = {
 	default: async ({ request }) => {
 		const body = formDataToObject(await request.formData());
