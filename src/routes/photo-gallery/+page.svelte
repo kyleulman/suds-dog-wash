@@ -5,14 +5,14 @@
 		page: {
 			title: 'Photo Gallery'
 		},
-		photos: data.resources
 	};
 </script>
 
 <section class="photo-gallery">
 	<h1>Photo Gallery</h1>
+	{#if data}
 	<div class="gallery">
-		{#each content.photos as photo}
+		{#each data.resources as photo}
 			<figure>
 				<a href={photo.secure_url} target="_blank">
 					<img src={photo.secure_url} alt={photo.alt} />
@@ -20,6 +20,7 @@
 			</figure>
 		{/each}
 	</div>
+	{/if}
 </section>
 
 <style>
