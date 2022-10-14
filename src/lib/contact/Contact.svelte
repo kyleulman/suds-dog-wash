@@ -6,22 +6,22 @@
 	<div>
 		{#if status?.name}<small class="error">Name {status.name}</small>{/if}
 		<label for="name" class="required">Name</label>
-		<input type="text" id="name" name="name" />
+		<input type="text" id="name" name="name" required />
 	</div>
 	<div>
 		{#if status?.email}<small class="error">Email {status.email}</small>{/if}
 		<label for="email" class="required">Email</label>
-		<input type="text" id="email" name="email" />
+		<input type="text" id="email" name="email" required />
 	</div>
 	<div>
 		{#if status?.subject}<small class="error">Subject {status.subject}</small>{/if}
 		<label for="subject" class="required">Subject</label>
-		<input type="text" id="subject" name="subject" />
+		<input type="text" id="subject" name="subject" required />
 	</div>
 	<div>
 		{#if status?.message}<small class="error">Message {status.subject}</small>{/if}
 		<label for="message" class="required">Message</label>
-		<textarea name="message" id="message" cols="30" rows="10" />
+		<textarea name="message" id="message" cols="30" rows="10" required />
 	</div>
 	<div>
 		<button class="btn" type="submit">Submit</button>
