@@ -1,3 +1,3 @@
 # Sudslingers Website
 
-Self-service dog wash & professional grooming
+Self-service dog wash & professional grooming.

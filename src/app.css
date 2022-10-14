@@ -96,6 +96,10 @@ label.required::after {
 	content: '*';
 }
 
+small.error {
+	color: yellow;
+}
+
 textarea {
 	resize: none;
 }

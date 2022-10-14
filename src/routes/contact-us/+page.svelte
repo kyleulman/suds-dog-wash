@@ -1,42 +1,34 @@
 <script>
 	import Contact from '$lib/contact/Contact.svelte';
 
-	export let data;
+	export let form;
 
 	const content = {
 		page: {
 			title: 'Contact Us'
 		}
 	};
-
-	// TODO -> Handle errors
 </script>
 
 <section class="contact">
-	{#if data.status}
-		<p class="status">
-			{#if data.status === '200'}
-				<em> Your message has been received, thank you! </em>
-			{:else}
-				<em>
-					An error occurred, please try again in a few minutes.
-					<!-- <a href={`${import.meta.env.VITE_API_URL}/api/errors?status=${data.status}`}>
-						click here to let Kyle know</a
-					>. -->
-				</em>
-			{/if}
-		</p>
-	{/if}
+	{#if form?.success} <div id="cool">{@html form.success}
+		<button class="btn" on:click={() => { document.querySelector("#cool").style.display = "none" }}>Cool!</button>
+	</div> {:else} <div id="heya">
+		<p>Heya! Since this is just a demo for now, form submissions aren't configured to go anywhere yet. To try the form out, enter some information below and it will be securely validated and returned to this page.</p>
+		<button class="btn" on:click={() => { document.querySelector("#heya").style.display = "none" }}>Gotcha</button>
+	</div> {/if}
+
 	<h1>{content.page.title}</h1>
 	<p>
 		Questions, concerns and feedback welcome! Let us know how our service was. We want to know what
 		our customers think and how we can improve to better serve you.
 	</p>
-	<Contact />
+	<Contact status={form?.status} />
 </section>
 
 <style>
 	section {
+		position: relative;
 		background: hsl(var(--dark-blue) / 0.75);
 		padding: 1rem 2rem;
 		border-radius: var(--radius);
@@ -47,9 +39,10 @@
 		letter-spacing: 1px;
 	}
 
-	.status {
-		margin: 1em auto;
-		text-align: center;
-		width: 80%;
+	div {
+		max-width: 300px;
+		position: absolute;
+		background:hsl(var(--dark));
+		padding: 1rem;
 	}
 </style>
